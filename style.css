@@ -27,10 +27,15 @@ body {
 }
 
 .button-container {
-  position: relative;
+  position: relative;      /* зона, внутри которой бегает NO */
+  display: flex;
+  justify-content: center; /* центрируем кнопки */
+  align-items: center;
+  gap: 30px;
   height: 80px;
 }
 
+/* обычное состояние кнопок */
 .btn {
   border: none;
   border-radius: 50px;
@@ -40,17 +45,26 @@ body {
   background: #ff5a4a;
   color: white;
   box-shadow: 0 4px 15px rgba(255,107,129,.5);
-  transition: 0.3s;
+  transition: transform 0.2s;
 }
 
 .btn:hover {
   transform: scale(1.1);
 }
 
+/* кнопка NO — изначально в потоке */
 .no {
-  position: absolute;
-  left: 140px;
+  position: relative;
 }
+
+/* когда начинает убегать */
+.no.moving {
+  position: absolute;
+  z-index: 2;
+}
+
+
+
 
 /* белый экран загрузки */
 .loading-screen {
@@ -88,3 +102,4 @@ body {
   margin-top: 1rem;
   color: black;
 }
+
