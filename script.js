@@ -33,4 +33,3 @@ yesBtn.addEventListener("click", () => {
     result.style.display = "flex";
   }, 3000);
 });
-
