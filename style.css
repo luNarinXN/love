@@ -12,7 +12,7 @@ body {
 .question-container {
   position: relative;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .local-gif {
@@ -102,4 +102,5 @@ body {
   margin-top: 1rem;
   color: black;
 }
+
 
